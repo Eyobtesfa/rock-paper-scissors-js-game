@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R-P-S</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body background="wallpaperflare.com_wallpaper (3).jpg">
+
+    <button onclick="
+        
+        computerPick = RPS();
+result(computerPick, 'Rock')
+        " class="move-button   rock-choice-button"><img src="rock.jpg" alt="" class="rock-button"></button>
+    <button onclick="
+    computerPick = RPS()
+    result(computerPick , 'Paper')
+    
+    
+    " class="move-button"><img src="paper.jpg" alt="" class="rock-button"></button>
+    <button onclick="
+    
+    computerPick = RPS()
+    //result(computerPick , 'Scissors')
+    
+    " class="move-button   scissors-button"><img src="scissors.jpg" alt="" class="rock-button"></button>
+    <p class="tell-result"></p>
+    <p class="tell-picks"></p>
+
+    <p class="tell-score"></p>
+
+    <button onclick="
+        storeResult.losses = 0;
+        storeResult.ties = 0;
+        storeResult.wins = 0;
+    localStorage.removeItem('score')
+
+    document.querySelector('.tell-score').innerHTML = `Wins: ${storeResult.wins}, Ties: ${storeResult.ties}, Losses: ${storeResult.losses}`;
+    " class="reset-button">Reset Score</button><button class="auto-play" onclick="
+    
+    autoPlay();
+    ">Auto play</button>
+
+    <script src="scripts/R-P-S.js">
+
+
+    </script>
+</body>
+</html>
